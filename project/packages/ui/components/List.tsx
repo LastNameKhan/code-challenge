@@ -8,12 +8,12 @@ interface MyProps {
 
 export const List = ({ pokemonList }: { pokemonList: MyProps[] }) => {
   return (
-    <>    
-    <ul>
-    {pokemonList.map((pokemon, index) => (
-      <li key={index}>{pokemon.name}</li>
-    ))}
-  </ul>
-  </>
+    <div className="parentGrid">
+      {pokemonList.map((pokemon, index) => (
+        <div key={index} className="childItem">
+          {pokemon.name}
+        </div>
+      ))}
+    </div>
   )
 }
